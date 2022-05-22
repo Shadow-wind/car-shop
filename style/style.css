@@ -1,0 +1,156 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+.container{
+    width: 1170px;
+    margin: 0 auto;
+
+}
+
+
+header{
+    width: 100%;
+    height: 70px;
+    background-color: rgb(180, 183, 183);
+    display:flex;
+    align-items: center;
+    text-align: center;
+
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-content: center;
+    justify-items: center;
+}
+.menu_header{
+    justify-content: space-between;
+}
+.menu_header a{
+    color: rgb(240, 239, 239);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    margin: auto 10px;
+    box-sizing: border-box;
+    
+    padding: 5px;
+    background-color: rgba(55, 54, 54, 0.656);
+    
+}
+.menu_header a:hover{
+    background-color: rgb(193, 196, 196);
+    padding: 5px;
+    box-sizing: border-box;
+    color: rgb(35, 35, 35);
+}
+
+
+.contacts{
+    background-color: rgba(55, 54, 54, 0.656);
+    
+    box-sizing: border-box;
+}
+.cont_text{
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(240, 239, 239);
+    padding: 10px;
+}
+
+
+
+
+
+.main_pages{
+    margin-top: 25px;
+}
+.main_pages h1{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+.forms_main{
+    display: flex;
+    max-width: 500px;
+    justify-content: space-between;
+}
+.forms_main select{
+    width: 93px;
+    height: 40px;
+    background: #FFFDFD;
+    border: 1px solid #000000;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(0, 0, 0, 0.4);
+
+}
+.forms_main input{
+    width: 80px;
+    height: 40px;
+     background-color: rgb(193, 196, 196);
+    box-sizing: border-box;
+    color: rgb(35, 35, 35);
+    border: 1px solid #000000;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}   
+
+.forms_main input:hover{
+   color: rgba(0, 0, 0, 0.4);
+background-color: #FFFDFD;
+
+}
+
+
+
+.cart{
+    max-width: 540px;
+    max-height: 391px;
+    box-sizing: content-box;
+    position: relative;
+    padding: 20px;
+    display: flex;
+}
+.cart img{
+    z-index: 1;
+}
+.text_cart{
+    width: 252px;
+    height: 124px;
+    background: rgba(217, 217, 217, 0.4);
+    z-index: 2;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
