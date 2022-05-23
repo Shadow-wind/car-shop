@@ -117,26 +117,80 @@ background-color: #FFFDFD;
 
 
 
+
+
+.carts{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-top: 20px;
+}
+
+
 .cart{
     max-width: 540px;
     max-height: 391px;
     box-sizing: content-box;
     position: relative;
-    padding: 20px;
     display: flex;
+
 }
 .cart img{
-    z-index: 1;
+    z-index: 0;
+    display: block;
 }
 .text_cart{
+    position: absolute;
     width: 252px;
     height: 124px;
     background: rgba(217, 217, 217, 0.4);
-    z-index: 2;
+    z-index: 9;
+    bottom: 30px;
+    /* top: 10px; */
+    left: 30px;
+    padding: 10px;
+    box-sizing: border-box;
+    
+}
+.name_text{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+    
+}
+.price_text span{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+.price_text{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
     
 }
 
 
+.class_text{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
 
 
 

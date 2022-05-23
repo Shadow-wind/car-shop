@@ -1,5 +1,36 @@
+<?php
+$conn = mysqli_connect('localhost', 'root', 'root', 'alina');
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+echo "Connected successfully";
+
+$info = [];
+
+if ($query = $conn->query("SELECT * FROM auto_car")) {
+    $info = $query->fetch_all(PDO::FETCH_ASSOC);
+} else {
+    print_r($conn->errorInfo());
+}
+print_r( $info);
+
+
+
+
+?>
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +38,7 @@
     <title>Cars</title>
     <link rel="stylesheet" href="style/style.css">
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -36,7 +68,7 @@
                             <option value="">Lamborghini</option>
                             <option value="">Mustang</option>
                         </select>
-                        
+
                     </form>
                     <form action="" method="post" name="color_form">
                         <select name="list_color" id="list_color">
@@ -46,7 +78,7 @@
                             <option value="">Черный</option>
                             <option value="">Белый</option>
                         </select>
-                        
+
                     </form>
                     <form action="" method="post" name="class_form">
                         <select name="list_class" id="list_class">
@@ -57,7 +89,7 @@
                             <option value="">D</option>
                             <option value="">E</option>
                         </select>
-                        
+
                     </form>
                     <form action="" method="post" name="price_form">
                         <select name="list_price" id="list_price">
@@ -67,29 +99,28 @@
                             <option value="">До 5 000 000</option>
                             <option value="">Более 5 000 000</option>
                         </select>
-                        
+
                     </form>
                     <input type="submit" value="Отправить ">
                 </div>
 
-                <div class="carts">
-                    <div class="cart"  >
-                        <img src="img/kiak5.jpeg" alt="#" width="540px">
-                        <div class="text_cart">
-                            <div class="name_text">Kia K5</div>
-                            <div class="price_text">От 2500000</div>
-                            <div class="class_text">E-класс</div>
-                        </div>
-                    </div>
-                </div>
-
-
-
 
                 
+                <div class="carts">
+                    <?php foreach ($info as $data): ?>
+                        <div class="cart">
+                            <img src="<?php echo $data['7']?> " alt="#" width="540px">
+                            <div class="text_cart">
+                                <div class="name_text"><?php echo $data['1']?> <?php echo $data['2']?> </div>
+                                <div class="price_text">От <span><?php echo $data['3']?></span> </div>
+                                <div class="class_text"><?php echo $data['4']?>-класс</div>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
             </div>
         </div>
-    </div>
 
 </body>
+
 </html>
